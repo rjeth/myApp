@@ -7,3 +7,15 @@ export default () => (
     <Link to="/">Back to home</Link>
   </React.Fragment>
 )
+
+export const query = graphql `
+  query {
+    site {
+      siteMetadata {
+        author,
+        description,
+        title
+      }
+    }
+  }
+`
